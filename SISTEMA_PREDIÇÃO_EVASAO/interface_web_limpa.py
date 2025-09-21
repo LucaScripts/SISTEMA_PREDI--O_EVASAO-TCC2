@@ -45,7 +45,7 @@ def main():
     st.markdown("**Versão 2.1 - Otimizada para AcadWeb**")
     
     # Criar abas
-    tab1, tab2, tab3, tab4 = st.tabs(["🤖 Processar Predições", "🎓 Tutorial AcadWeb", "📊 Dashboard Power BI", "📋 Sobre o Sistema"])
+    tab1, tab2, tab3, tab4 = st.tabs(["💼Processar Predições", "🎓 Tutorial AcadWeb", "📊 Dashboard Power BI", "📋 Sobre o Sistema"])
     
     with tab1:
         processar_predicoes_tab()
@@ -507,7 +507,7 @@ def tutorial_acadweb_tab():
         
         with col2:
             st.markdown("""
-            ### 👥 **2. Filtrar**
+            ### 👥 **📊 2. Selecionar Alunos Ativos**
             - Selecionar "Ativos"
             - Clicar "Selecionar"
             """)

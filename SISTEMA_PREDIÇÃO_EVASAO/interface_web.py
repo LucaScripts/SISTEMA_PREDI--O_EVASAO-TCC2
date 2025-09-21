@@ -491,7 +491,7 @@ def main():
     st.title("🎓 Sistema de Predição de Evasão Estudantil")
     
     # Criar abas
-    tab1, tab2, tab3 = st.tabs(["🤖 Processar Predições", "📊 Dashboard Power BI", "📋 Sobre o Sistema"])
+    tab1, tab2, tab3 = st.tabs(["💼 Processar Predições", "📊 Dashboard Power BI", "📋 Sobre o Sistema"])
     
     with tab1:
         processar_predicoes_tab()
