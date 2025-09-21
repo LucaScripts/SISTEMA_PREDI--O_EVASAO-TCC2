@@ -192,12 +192,27 @@ class SistemaPredicaoEvasao:
                     # Converter para numpy array se necessário
                     import numpy as np
                     valores_array = np.array(valores_aluno)
-                    indice_max = np.abs(valores_array).argmax()
-                    if indice_max < len(nomes_features):
-                        fator_principal = nomes_features[indice_max]
-                        valor_importancia = float(valores_array[indice_max])
-        except Exception:
+                    
+                    # Para modelos multiclasse, valores SHAP têm forma (n_features, n_classes)
+                    # Calcular a importância absoluta máxima por feature (entre todas as classes)
+                    if valores_array.ndim == 2:  # Shape (n_features, n_classes)
+                        # Para cada feature, pegar o valor SHAP com maior magnitude absoluta
+                        importancias_features = np.max(np.abs(valores_array), axis=1)
+                        indice_max = np.argmax(importancias_features)
+                        
+                        if indice_max < len(nomes_features):
+                            fator_principal = nomes_features[indice_max]
+                            # Valor específico que teve maior impacto para esta feature
+                            classe_max = np.argmax(np.abs(valores_array[indice_max]))
+                            valor_importancia = float(valores_array[indice_max, classe_max])
+                    elif valores_array.ndim == 1:  # Shape (n_features,) - modelo binário
+                        indice_max = np.argmax(np.abs(valores_array))
+                        if indice_max < len(nomes_features):
+                            fator_principal = nomes_features[indice_max]
+                            valor_importancia = float(valores_array[indice_max])
+        except Exception as e:
             # Se houver algum erro com SHAP, usar valores padrão
+            registrador.debug(f"Erro ao processar valores SHAP para aluno {indice_aluno}: {e}")
             fator_principal = "N/A"
             valor_importancia = 0.0
         
