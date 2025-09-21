@@ -1,0 +1,8 @@
+21/09/2025 15:56:59 - Atualização automática - 3 alunos
+21/09/2025 15:58:11 - Atualização automática - 920 alunos
+21/09/2025 16:05:58 - CSV atualizado - 3 alunos - Origem: teste_estrutura_padronizada.xlsx
+21/09/2025 16:07:33 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
+21/09/2025 16:17:11 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
+21/09/2025 16:27:54 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
+21/09/2025 16:54:22 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
+21/09/2025 17:01:12 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx

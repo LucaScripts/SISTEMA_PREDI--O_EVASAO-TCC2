@@ -1,0 +1,126 @@
+﻿📊 GUIA COMPLETO: AUTOMAÇÃO POWER BI
+===================================
+
+🎯 OBJETIVO: Eliminar trabalho manual - sistema web atualiza Power BI automaticamente
+
+📋 FLUXO AUTOMATIZADO:
+1. Usuário processa predições no sistema web
+2. CSV é salvo automaticamente em C:/PowerBI_Data/
+3. Power BI detecta mudança e atualiza
+4. Dashboard web é atualizado automaticamente
+5. Link público sempre atualizado
+
+🔧 CONFIGURAÇÃO POWER BI DESKTOP:
+================================
+
+PASSO 1: Preparar fonte de dados
+---------------------------------
+1. Abra seu Power BI Desktop
+2. Vá em "Obter Dados" → "Arquivo" → "Texto/CSV"
+3. Navegue para: C:\PowerBI_Data\predicoes_evasao.csv
+4. Importe os dados normalmente
+
+PASSO 2: Configurar refresh automático
+--------------------------------------
+1. Vá em "Transformar Dados" (Power Query)
+2. Na ribbon superior: "Página Inicial" → "Opções de Consulta"
+3. Em "Carregamento de Dados":
+   ✅ Marque "Detectar automaticamente alterações nos dados"
+   ✅ Configure intervalo: 5 minutos (recomendado)
+
+PASSO 3: Configurar atualização de página
+------------------------------------------
+1. Na visualização principal do Power BI
+2. Vá em "Ver" → "Atualização de Página"
+3. Ative "Atualização Automática de Página"
+4. Configure: A cada 10 minutos (para não sobrecarregar)
+
+PASSO 4: Salvar e publicar
+--------------------------
+1. Salve seu arquivo .pbix
+2. Publique no Power BI Service (botão "Publicar")
+3. No Power BI Service, configure:
+   - Vá em "Configurações" do dataset
+   - Ative "Atualização Agendada"
+   - Configure credenciais se necessário
+
+🌐 CONFIGURAÇÃO POWER BI SERVICE:
+=================================
+
+PASSO 5: Configurar dataset no Service
+---------------------------------------
+1. Acesse app.powerbi.com
+2. Encontre seu dataset
+3. Clique em "..." → "Configurações"
+4. Em "Conexão de Gateway":
+   - Se arquivo local: configure Gateway Pessoal
+   - Se arquivo em nuvem: configure credenciais
+
+PASSO 6: Ativar refresh automático
+-----------------------------------
+1. Em "Atualização agendada":
+   ✅ Ative "Manter seus dados atualizados"
+   ✅ Frequência: Diário
+   ✅ Horários: Configure conforme necessário
+   
+2. Em "Atualização de página":
+   ✅ Ative para o relatório
+   ✅ Interval: 10 minutos
+
+📂 ESTRUTURA DE ARQUIVOS:
+========================
+
+C:/PowerBI_Data/
+├── predicoes_evasao.csv          ← Arquivo principal (atualizado automaticamente)
+├── README_CONFIGURACAO.txt       ← Este guia
+└── log_atualizacoes.txt          ← Log de quando foi atualizado
+
+🚀 TESTANDO A AUTOMAÇÃO:
+========================
+
+1. Execute o sistema web: EXECUTAR_SISTEMA.bat
+2. Acesse: http://localhost:8501
+3. Faça upload de uma planilha
+4. ✅ Marque "Atualizar Power BI automaticamente"
+5. Processe as predições
+6. Verifique se CSV foi salvo em C:/PowerBI_Data/
+7. Aguarde alguns minutos - Power BI deve detectar mudança
+
+💡 DICAS IMPORTANTES:
+====================
+
+• PRIMEIRA VEZ: Processe pelo menos uma vez manualmente para criar o CSV inicial
+• ESTRUTURA: Power BI deve estar configurado antes da primeira automação
+• GATEWAY: Se usar arquivos locais, instale Power BI Gateway
+• PERMISSIONS: Certifique-se que Power BI tem acesso à pasta C:/PowerBI_Data/
+
+🔗 SEU LINK PÚBLICO:
+===================
+https://app.powerbi.com/view?r=eyJrIjoiZTg2MmYwZTItZjgzZi00ODNmLTk0NTEtMTAzZWRmNDBkZGMwIiwidCI6IjZmZjM3NGY1LWUzZWItNGM2Zi1iN2I1LTUwOTE2NDA5MzdmOCJ9
+
+Este link será automaticamente atualizado sempre que processar novas predições!
+
+📞 PRÓXIMOS PASSOS:
+==================
+
+1. ✅ Configure Power BI Desktop (Passos 1-4)
+2. ✅ Configure Power BI Service (Passos 5-6)  
+3. ✅ Teste a automação
+4. 🎉 Elimine trabalho manual para sempre!
+
+🚨 TROUBLESHOOTING:
+==================
+
+PROBLEMA: CSV não é detectado pelo Power BI
+SOLUÇÃO: Verifique permissões da pasta e configuração de refresh
+
+PROBLEMA: Power BI Service não atualiza
+SOLUÇÃO: Configure Gateway ou mova arquivos para SharePoint/OneDrive
+
+PROBLEMA: Demora muito para atualizar
+SOLUÇÃO: Reduza intervalo de refresh (cuidado com limites de API)
+
+==========================================
+🎯 Resultado Final: ZERO trabalho manual!
+🚀 Sistema web → Power BI → Link público
+==========================================

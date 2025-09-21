@@ -1,0 +1,22 @@
+2025-09-21 14:22:29,319 - codigo_fonte.nucleo.preditor - INFO - Inicializando sistema de predição de evasão...
+2025-09-21 14:22:29,320 - codigo_fonte.modelos.modelo_ml - INFO - Carregando modelo de machine learning...
+2025-09-21 14:22:29,471 - codigo_fonte.modelos.modelo_ml - INFO - Modelo carregado: XGBClassifier
+2025-09-21 14:22:29,472 - codigo_fonte.modelos.modelo_ml - INFO - Mapeamento de classes carregado
+2025-09-21 14:22:29,474 - codigo_fonte.modelos.modelo_ml - INFO - Inicializando explainer SHAP...
+2025-09-21 14:22:29,636 - codigo_fonte.modelos.modelo_ml - INFO - Modelo carregado com sucesso
+2025-09-21 14:22:29,675 - codigo_fonte.utilitarios.carregador_dados - INFO - Disciplinas carregadas: 253 registros
+2025-09-21 14:22:29,679 - codigo_fonte.utilitarios.carregador_dados - INFO - Cursos carregados: 10 registros
+2025-09-21 14:22:29,679 - codigo_fonte.regras_negocio.analisador_curriculo - WARNING - Coluna 'Código' não encontrada em cursos
+2025-09-21 14:22:29,680 - codigo_fonte.regras_negocio.analisador_curriculo - INFO - Analisador de currículo inicializado
+2025-09-21 14:22:29,680 - codigo_fonte.nucleo.preditor - INFO - Sistema inicializado com sucesso
+2025-09-21 14:22:36,205 - codigo_fonte.nucleo.preditor - INFO - Inicializando sistema de predição de evasão...
+2025-09-21 14:22:36,205 - codigo_fonte.modelos.modelo_ml - INFO - Carregando modelo de machine learning...
+2025-09-21 14:22:36,226 - codigo_fonte.modelos.modelo_ml - INFO - Modelo carregado: XGBClassifier
+2025-09-21 14:22:36,227 - codigo_fonte.modelos.modelo_ml - INFO - Mapeamento de classes carregado
+2025-09-21 14:22:36,229 - codigo_fonte.modelos.modelo_ml - INFO - Inicializando explainer SHAP...
+2025-09-21 14:22:36,393 - codigo_fonte.modelos.modelo_ml - INFO - Modelo carregado com sucesso
+2025-09-21 14:22:36,434 - codigo_fonte.utilitarios.carregador_dados - INFO - Disciplinas carregadas: 253 registros
+2025-09-21 14:22:36,439 - codigo_fonte.utilitarios.carregador_dados - INFO - Cursos carregados: 10 registros
+2025-09-21 14:22:36,439 - codigo_fonte.regras_negocio.analisador_curriculo - WARNING - Coluna 'Código' não encontrada em cursos
+2025-09-21 14:22:36,439 - codigo_fonte.regras_negocio.analisador_curriculo - INFO - Analisador de currículo inicializado
+2025-09-21 14:22:36,440 - codigo_fonte.nucleo.preditor - INFO - Sistema inicializado com sucesso

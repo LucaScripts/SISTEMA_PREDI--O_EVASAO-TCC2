@@ -171,16 +171,21 @@ class SistemaPredicaoEvasao:
         else:
             status_predicao = 'RISCO_EVASAO'
         
-        # Calcular nível de urgência baseado na probabilidade
-        probabilidade_num = resultado_regra.probabilidade
-        if probabilidade_num >= 0.9:
-            nivel_urgencia = 'URGENTE'
-        elif probabilidade_num >= 0.8:
-            nivel_urgencia = 'ALTA'
-        elif probabilidade_num >= 0.7:
-            nivel_urgencia = 'MEDIA'
+        # Calcular nível de urgência baseado no status e probabilidade
+        if status_predicao == 'MATRICULADO':
+            # Alunos matriculados estão OK, sem urgência
+            nivel_urgencia = 'NENHUMA'
         else:
-            nivel_urgencia = 'BAIXA'
+            # Para alunos em risco, usar probabilidade para definir urgência
+            probabilidade_num = resultado_regra.probabilidade
+            if probabilidade_num >= 0.9:
+                nivel_urgencia = 'URGENTE'
+            elif probabilidade_num >= 0.8:
+                nivel_urgencia = 'ALTA'
+            elif probabilidade_num >= 0.7:
+                nivel_urgencia = 'MEDIA'
+            else:
+                nivel_urgencia = 'BAIXA'
         
         # Obter fator principal (feature mais importante do SHAP)
         fator_principal = "N/A"

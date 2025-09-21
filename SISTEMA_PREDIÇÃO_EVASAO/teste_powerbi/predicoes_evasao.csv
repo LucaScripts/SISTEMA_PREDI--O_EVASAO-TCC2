@@ -1,0 +1,6 @@
+﻿Nome,Matricula,Curso,Sexo,Turma,Status,Situacao_Predita,Probabilidade_Situacao,Probabilidade_Evasao_Total,Urgencia,Fator_Principal,Valor_Importancia,Confianca,Emoji,Top_1_Situacao,Top_1_Prob,Top_2_Situacao,Top_2_Prob,Top_3_Situacao,Top_3_Prob,Data_Processamento,Total_Processados,Arquivo_Origem
+Teste Urgente,001,Info,M,N/A,RISCO_EVASAO,Matriculado,50.0%,95%,URGENTE,Não identificado,0.0,Média,🔴,Matriculado,50.0%,Matriculado,30.0%,Limpeza Academica,15.0%,2025-09-21 16:26:37,5,teste_cores_psicologicas.csv
+Teste Alta,002,Info,M,N/A,RISCO_EVASAO,Matriculado,50.0%,85%,ALTA,Não identificado,0.0,Média,🟠,Matriculado,50.0%,Matriculado,30.0%,Limpeza Academica,15.0%,2025-09-21 16:26:37,5,teste_cores_psicologicas.csv
+Teste Média,003,Info,M,N/A,RISCO_EVASAO,Matriculado,50.0%,70%,MEDIA,Não identificado,0.0,Média,🟡,Matriculado,50.0%,Matriculado,30.0%,Limpeza Academica,15.0%,2025-09-21 16:26:37,5,teste_cores_psicologicas.csv
+Teste Baixa,004,Info,M,N/A,RISCO_EVASAO,Matriculado,50.0%,60%,BAIXA,Não identificado,0.0,Média,🔵,Matriculado,50.0%,Matriculado,30.0%,Limpeza Academica,15.0%,2025-09-21 16:26:37,5,teste_cores_psicologicas.csv
+Teste Matriculado,005,Info,M,N/A,MATRICULADO,Matriculado,50.0%,5%,NENHUMA,Não identificado,0.0,Média,⚪,Matriculado,50.0%,Matriculado,30.0%,Limpeza Academica,15.0%,2025-09-21 16:26:37,5,teste_cores_psicologicas.csv

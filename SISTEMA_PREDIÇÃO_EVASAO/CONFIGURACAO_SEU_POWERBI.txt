@@ -1,0 +1,99 @@
+﻿📊 CONFIGURAÇÃO ESPECÍFICA - SEU POWER BI
+========================================
+
+🎯 PASTA CONFIGURADA: C:\Users\lucas\Downloads\TCC2\SISTEMA_PREDIÇÃO_EVASAO TCC2\Dashboard\
+
+📁 ARQUIVOS NA PASTA:
+├── Grau Tecnico Dashboard Final.pbix    ← Seu arquivo Power BI
+├── predicoes_evasao.csv                 ← CSV das predições (✅ CRIADO!)
+├── log_atualizacoes.txt                 ← Log de atualizações
+└── Layout - Dashboard GRAU T/           ← Layouts
+
+🚀 CONFIGURAÇÃO RÁPIDA:
+======================
+
+PASSO 1: Configurar fonte de dados no Power BI
+-----------------------------------------------
+1. Abra "Grau Tecnico Dashboard Final.pbix"
+2. Vá em "Transformar Dados" (Power Query)
+3. Adicione nova fonte: "Obter Dados" → "Texto/CSV"
+4. Selecione: predicoes_evasao.csv (está na mesma pasta!)
+5. Configure as colunas conforme necessário
+
+PASSO 2: Configurar refresh automático
+--------------------------------------
+1. No Power Query: "Página Inicial" → "Opções de Consulta"
+2. ✅ "Detectar automaticamente alterações nos dados" 
+3. ✅ Configure para atualizar nos horários:
+   🕐 08h, 09h, 10h, 11h, 14h, 15h, 16h, 17h
+4. Aplicar e Fechar
+
+PASSO 3: Salvar e testar
+------------------------
+1. Salve o arquivo .pbix
+2. Teste: Execute o sistema web
+3. Processe uma planilha com "✅ Atualizar Power BI automaticamente"
+4. Verifique se predicoes_evasao.csv foi atualizado
+5. Power BI deve detectar a mudança automaticamente
+
+🌐 SEU DASHBOARD INTEGRADO:
+============================
+
+1. 👤 Usuário acessa: http://localhost:8501
+2. 📁 Faz upload da planilha AcadWeb
+3. ✅ Marca "Atualizar Power BI automaticamente"
+4. 🚀 Processa predições
+5. 💾 CSV salvo automaticamente na pasta Dashboard
+6. 📊 Vai para aba "📊 Dashboard Power BI"
+7. 🎯 Visualiza dados DIRETAMENTE na interface web
+8. 🔄 Clica "Atualizar Dashboard" quando necessário
+
+💡 **VANTAGEM**: Tudo em uma única interface! Sem abrir links externos!
+
+🔗 SEU LINK ATUAL:
+==================
+https://app.powerbi.com/view?r=eyJrIjoiZTg2MmYwZTItZjgzZi00ODNmLTk0NTEtMTAzZWRmNDBkZGMwIiwidCI6IjZmZjM3NGY1LWUzZWItNGM2Zi1iN2I1LTUwOTE2NDA5MzdmOCJ9
+
+Este link será automaticamente atualizado sempre que alguém processar novas predições!
+
+📊 ESTRUTURA DO CSV GERADO:
+===========================
+- Matrícula
+- Nome  
+- Situação Atual
+- Curso
+- Status Predição (RISCO_EVASAO / MATRICULADO)
+- Situação Predita
+- Probabilidade Evasão
+- Nível Urgência
+- Fator Principal
+- Confiança
+- Data_Processamento (timestamp)
+- Total_Alunos_Processados
+- Arquivo_Original
+
+✅ TESTE REALIZADO:
+==================
+- ✅ Pasta Dashboard detectada
+- ✅ Arquivo predicoes_evasao.csv criado
+- ✅ 3 alunos de teste processados
+- ✅ Log de atualização funcionando
+
+🎯 PRÓXIMO PASSO:
+================
+1. Abra seu "Grau Tecnico Dashboard Final.pbix"
+2. Configure para ler predicoes_evasao.csv
+3. Teste o fluxo completo
+4. 🎉 Elimine trabalho manual para sempre!
+
+🚨 DICAS IMPORTANTES:
+====================
+• O CSV está na MESMA PASTA do seu .pbix - mais fácil!
+• Configure refresh de 5-10 minutos (não menos para evitar sobrecarga)
+• Primeira execução: sempre teste manualmente
+• Backup: Power BI faz backup automático dos datasets
+
+================================================
+🎊 RESULTADO: ZERO trabalho manual no seu BI!
+Sistema Web → Dashboard → Link Público atualizado
+================================================
