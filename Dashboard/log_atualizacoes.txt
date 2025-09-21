@@ -6,3 +6,4 @@
 21/09/2025 16:27:54 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
 21/09/2025 16:54:22 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
 21/09/2025 17:01:12 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
+21/09/2025 18:31:01 - CSV atualizado - 920 alunos - Origem: Planilha de alunos ativos.xlsx
