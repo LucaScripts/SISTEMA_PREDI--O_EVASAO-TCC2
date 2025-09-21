@@ -69,22 +69,56 @@ def processar_predicoes_tab():
         
         st.markdown("---")
         
-        # Tutorial compacto
-        st.header("📚 Como Usar")
-        
+        # Tutorial do AcadWeb com prints
         with st.expander("🎓 **Tutorial AcadWeb**", expanded=True):
             st.markdown("""
-            **🔐 No AcadWeb:**
-            1. Alunos → "Apenas Ativos" → Selecionar
-            2. Botão direito → "Relatório Excel"
-            3. Escolha "Base de dados" (31 colunas)
-            4. Download do arquivo
-            
-            **⚡ Aqui no Sistema:**
-            5. Upload do arquivo Excel
-            6. Clique "Processar Predições"
-            7. Download dos resultados
+            **🔐 Passo 1: No AcadWeb**
+            1. Faça login no sistema AcadWeb
+            2. Acesse o menu "Alunos"
             """)
+            
+            # Screenshot do passo 1
+            try:
+                st.image("../Prints/Screenshot_1.png", caption="📸 Passo 1: Tela de login e acesso ao menu Alunos", use_container_width=True)
+            except:
+                st.info("📸 **Print 1:** Tela de login e menu do AcadWeb")
+            
+            st.markdown("""
+            **📊 Passo 2: Gerar Relatório**
+            3. Selecione "Apenas Ativos" e clique no botão "Selecionar" para listar os alunos
+            """)
+            
+            # Screenshot do passo 2
+            try:
+                st.image("../Prints/Screenshot_2.png", caption="📸 Passo 2: Seleção de alunos ativos", use_container_width=True)
+            except:
+                st.info("📸 **Print 2:** Filtros de seleção de alunos ativos")
+            
+            st.markdown("""
+            **💾 Passo 3: Download e Upload**
+            4. Clique com botão direito na **matrícula** na lista de alunos
+            5. Selecione "Relatório Excel"
+            """)
+            
+            # Screenshot do passo 3
+            try:
+                st.image("../Prints/Screenshot_3.png", caption="📸 Passo 3: Menu de contexto para relatório Excel", use_container_width=True)
+            except:
+                st.info("📸 **Print 3:** Menu de contexto e seleção de relatório")
+            
+            st.markdown("""
+            **📋 Passo 4: Configurar e Baixar**
+            6. Coloque o título para **"Base de dados"** e marque **(31 colunas)**
+            7. Clique em **"Imprimir"** e aguarde carregar
+            8. Faça o **download do arquivo**
+            9. **Upload** do arquivo aqui no sistema e clique "Processar Predições"
+            """)
+            
+            # Screenshot do passo 4
+            try:
+                st.image("../Prints/Screenshot_4.png", caption="📸 Passo 4: Configuração e download do relatório", use_container_width=True)
+            except:
+                st.info("📸 **Print 4:** Configuração e download do arquivo")
         
         # Métricas do sistema
         st.markdown("### ⚙️ **Capacidade**")
@@ -436,26 +470,22 @@ def exibir_resultados(resultados, formato_saida, estatisticas=None, auto_powerbi
 def tutorial_acadweb_tab():
     """Aba completa com tutorial do AcadWeb"""
     
-    # Navegação lateral para o tutorial
-    with st.sidebar:
-        st.title("📚 Tutorial AcadWeb")
-        st.markdown("---")
-        
-        opcoes_tutorial = [
+    # Navegação para o tutorial (removida da lateral)
+    opcoes_tutorial = [
             "📋 Visão Geral",
-            "🔐 1. Acesso ao Sistema",
-            "👥 2. Seleção de Alunos",
-            "📊 3. Exportar Excel",
-            "💾 4. Download e Upload",
-            "⚡ 5. Processamento",
+            "🔐 1. Login no AcadWeb",
+            "📊 2. Selecionar Alunos Ativos",
+            "💾 3. Menu Relatório Excel",
+            "📁 4. Gerenciar o Arquivo Excel",
+            "⚡ 5. Upload e Processamento",
             "❓ FAQ"
         ]
-        
-        passo_selecionado = st.selectbox("Escolha um passo:", opcoes_tutorial)
+    
+    passo_selecionado = st.selectbox("Escolha um passo:", opcoes_tutorial)
     
     # Conteúdo principal baseado na seleção
     if passo_selecionado == "📋 Visão Geral":
-        st.title("📚 Tutorial: Como Gerar Arquivo Excel no AcadWeb")
+        st.title("🎓 Tutorial: Como Gerar Arquivo Excel no AcadWeb")
         
         st.markdown("""
         ## 🎯 **Objetivo**
@@ -522,8 +552,15 @@ def tutorial_acadweb_tab():
         with col_stats3:
             st.metric("👥 Alunos Analisados", "955", "+100")
     
-    elif passo_selecionado == "🔐 1. Acesso ao Sistema":
-        st.title("🔐 Passo 1: Acesso ao Sistema AcadWeb")
+    elif passo_selecionado == "🔐 1. Login no AcadWeb":
+        st.title("🔐 Passo 1: Login no AcadWeb")
+        
+        # Screenshot do passo 1
+        try:
+            st.image("../Prints/Screenshot_1.png", caption="📸 Tela de login e menu do AcadWeb", use_container_width=True)
+        except:
+            st.info("📸 **Print 1: Tela de login e menu do AcadWeb**")
+            st.markdown("*Screenshot_1.png não encontrado - verifique o caminho da pasta Prints*")
         
         st.markdown("""
         ## 📝 **Instruções Detalhadas**
@@ -555,8 +592,15 @@ def tutorial_acadweb_tab():
         - Mantenha a confidencialidade das informações
         """)
     
-    elif passo_selecionado == "👥 2. Seleção de Alunos":
-        st.title("👥 Passo 2: Seleção de Alunos Ativos")
+    elif passo_selecionado == " 2. Selecionar Alunos Ativos":
+        st.title("📋 Passo 2: Selecionar Alunos Ativos")
+        
+        # Screenshot do passo 2
+        try:
+            st.image("../Prints/Screenshot_2.png", caption="📸 Filtros de seleção e menu de contexto", use_container_width=True)
+        except:
+            st.info("📸 **Print 2: Filtros de seleção de alunos ativos**")
+            st.markdown("*Screenshot_2.png não encontrado - verifique o caminho da pasta Prints*")
         
         st.markdown("""
         ## 🎯 **Como Filtrar Alunos Corretamente**
@@ -597,24 +641,32 @@ def tutorial_acadweb_tab():
             - Apenas alunos com status ativo
             """)
     
-    elif passo_selecionado == "📊 3. Exportar Excel":
-        st.title("📊 Passo 3: Exportar Relatório Excel")
+    elif passo_selecionado == "� 3. Menu Relatório Excel":
+        st.title("� Passo 3: Menu Relatório Excel")
+        
+        # Screenshot do passo 3
+        try:
+            st.image("../Prints/Screenshot_3.png", caption="📸 Configuração do relatório Base de dados", use_container_width=True)
+        except:
+            st.info("📸 **Print 3: Menu de contexto e seleção de relatório**")
+            st.markdown("*Screenshot_3.png não encontrado - verifique o caminho da pasta Prints*")
         
         st.markdown("""
-        ## 🖱️ **Como Gerar o Arquivo Excel**
+        ## 🖱️ **Como Acessar o Menu de Relatório**
         
         ### 1. **Localizar uma Matrícula**
         - Na lista de alunos exibida, encontre qualquer matrícula
         - Exemplo: `ELT250051`, `ENF200087`, etc.
         
         ### 2. **Clicar com Botão Direito**
-        - Posicione o cursor sobre **qualquer matrícula**
+        - Posicione o cursor sobre **qualquer matrícula** na lista
         - Clique com o **botão direito do mouse**
         - Um menu contextual aparecerá
         
         ### 3. **Selecionar "Relatório Excel"**
         - No menu que aparecer, procure por **"Relatório Excel"**
         - Clique nesta opção
+        - Uma nova janela de configuração se abrirá
         """)
         
         st.markdown("### 📋 **Configurações do Relatório**")
@@ -648,8 +700,15 @@ def tutorial_acadweb_tab():
         Se aparecer número diferente, o sistema pode não funcionar corretamente.
         """)
     
-    elif passo_selecionado == "💾 4. Download e Upload":
-        st.title("💾 Passo 4: Download e Preparação do Arquivo")
+    elif passo_selecionado == "� 4. Configurar e Baixar":
+        st.title("� Passo 4: Configurar e Baixar Relatório")
+        
+        # Screenshot do passo 4
+        try:
+            st.image("../Prints/Screenshot_4.png", caption="📸 Interface de upload e processamento", use_container_width=True)
+        except:
+            st.info("📸 **Print 4: Tela de download e interface de upload**")
+            st.markdown("*Screenshot_4.png não encontrado - verifique o caminho da pasta Prints*")
         
         st.markdown("""
         ## 📁 **Gerenciar o Arquivo Excel**
@@ -694,7 +753,7 @@ def tutorial_acadweb_tab():
         5. ⚡ Aguarde o upload e processamento automático
         """)
     
-    elif passo_selecionado == "⚡ 5. Processamento":
+    elif passo_selecionado == "⚡ 5. Upload e Processamento":
         st.title("⚡ Passo 5: Processamento e Resultados")
         
         st.markdown("""
